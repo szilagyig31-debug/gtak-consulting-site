@@ -29,7 +29,7 @@
     <main class="hero" role="main" aria-labelledby="hero-title">
       <div>
         <div class="kicker">[ TEST ] · [ TDM ] · [ REL ] · [ QA ]</div>
-        <div class="h1" id="hero-title">QUALITY CONTROL SYSTEM: ACTIVE</div>
+        <h1 class="h1" id="hero-title">QUALITY CONTROL SYSTEM: ACTIVE</h1>
         <p class="lead">We simplify QA. We secure releases. We manage data with precision. No guesswork. Only measurable quality.</p>
         <div class="cta-row">
           <a href="contact.html" class="btn btn--primary">REQUEST SYSTEM ACCESS</a>
@@ -41,6 +41,8 @@
           <div class="module">Enterprise</div>
           <div class="module">Audit-ready</div>
         </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:13px">Live systems, measurable metrics, engineered releases.</div>
       </div>
 
       <aside class="dashboard" aria-label="System panels">
@@ -80,7 +82,7 @@
         </div>
         <div class="card">
           <h3>Release Management</h3>
-          <p>CI/CD orchestration, gating, canary és rollback stratégiák, production readiness.</p>
+          <p>CI/CD orchestration, release gating, canary deployments és rollback playbookok.</p>
         </div>
         <div class="card">
           <h3>Quality Assurance</h3>
@@ -93,7 +95,7 @@
       <h2 class="section-title">Miért GTAK?</h2>
       <div class="why">
         <div>
-          <p style="color:var(--muted);">Hat tulajdonos, enterprise-grade módszertan, audit-ready folyamatok. Mi rendszereket adunk a minőség mögé — that means measurable outcomes, not hope.</p>
+          <p style="color:var(--muted);">Hat tulajdonos, enterprise-grade módszertan, audit-ready folyamatok. Mi rendszereket adunk a minőség mögé — mérhető eredmények, nem találgatás.</p>
           <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
             <div class="stat"><h4>6</h4><div style="color:var(--muted)">Founders</div></div>
             <div class="stat"><h4>94%</h4><div style="color:var(--muted)">Avg QA Stability</div></div>
@@ -107,7 +109,7 @@
       </div>
     </section>
 
-    <!-- Team / Contact excerpt -->
+    <!-- TEAM excerpt -->
     <section id="team">
       <h2 class="section-title">Csapat</h2>
       <div class="team">
@@ -117,6 +119,7 @@
       </div>
     </section>
 
+    <!-- Contact CTA -->
     <section id="contact">
       <h2 class="section-title">Kapcsolat</h2>
       <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
@@ -146,11 +149,9 @@
     <footer>
       © <span id="year"></span> GTAK Consulting Kft. — QA · Test Data · Release Management
     </footer>
-
   </div>
 
   <script>
-    // demo metric animation
     (function(){
       const qaIndex = document.getElementById('qa-index');
       const dataCoverage = document.getElementById('data-coverage');
