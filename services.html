@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Szolgáltatások — GTAK Consulting</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo"><div class="mark">GT</div><div><div>GTAK</div><div style="font-size:12px;color:var(--muted);font-weight:700">CONSULTING</div></div></div>
+      <nav class="nav">
+        <a href="index.html">Főoldal</a>
+        <a href="services.html">Szolgáltatások</a>
+        <a href="about.html">Rólunk</a>
+        <a href="team.html">Csapat</a>
+        <a class="cta" href="contact.html">Kapcsolat</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="section-title">Szolgáltatásaink részletesen</h1>
+        <p style="text-align:center;color:var(--muted);max-width:900px;margin:auto">Teljes körű tesztelés és release-szolgáltatások vállalati ügyfelek számára — integrált, auditálható és skálázható megközelítéssel.</p>
+      </section>
+
+      <section style="margin-top:24px">
+        <div class="grid">
+          <div class="card">
+            <h3>Software Testing</h3>
+            <p>Teljes életciklusú tesztelési szolgáltatás: stratégiától az execution-ig (automata és manuális), erőforrás managementtel.</p>
+            <ul style="margin-top:10px;color:var(--muted)">
+              <li>Functional / Regression</li>
+              <li>API / Integration</li>
+              <li>Performance / Load</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Test Data Management</h3>
+            <p>Adatmaszkolás, szintetikus adatok, provisioning és self-service catalog, hogy a tesztek gyorsan és biztonságosan fussanak.</p>
+            <ul style="margin-top:10px;color:var(--muted)">
+              <li>Data masking</li>
+              <li>Subsetting</li>
+              <li>Orchestration</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Release Management</h3>
+            <p>Release planing, gating, orchestration és rollbacks. Canary és staged deployment minták, valamint rollback playbookok.</p>
+            <ul style="margin-top:10px;color:var(--muted)">
+              <li>CI/CD pipelines</li>
+              <li>Release gating</li>
+              <li>Rollback strategies</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>QA Advisory & Governance</h3>
+            <p>Framework kialakítás, maturity assessment, KPI-ok felállítása és implementálása, valamint compliance audit támogatás.</p>
+            <ul style="margin-top:10px;color:var(--muted)">
+              <li>QA maturity model</li>
+              <li>Metrics & dashboards</li>
+              <li>Audit readiness</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:36px">© <span id="year-services"></span> GTAK Consulting Kft.</footer>
+  </div>
+  <script>document.getElementById('year-services').textContent = new Date().getFullYear();</script>
+</body>
+</html>

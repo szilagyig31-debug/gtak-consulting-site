@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rólunk — GTAK Consulting</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo"><div class="mark">GT</div><div><div>GTAK</div><div style="font-size:12px;color:var(--muted);font-weight:700">CONSULTING</div></div></div>
+      <nav class="nav">
+        <a href="index.html">Főoldal</a>
+        <a href="services.html">Szolgáltatások</a>
+        <a href="about.html">Rólunk</a>
+        <a href="team.html">Csapat</a>
+        <a class="cta" href="contact.html">Kapcsolat</a>
+      </nav>
+    </header>
+
+    <main>
+      <section style="padding-top:20px">
+        <h1 class="section-title">Rólunk</h1>
+        <p style="max-width:900px;margin:auto;color:var(--muted);text-align:center;font-size:16px;line-height:1.6;">
+          A GTAK Consulting egy hat tulajdonos által vezetett tanácsadó és mérnöki csapat. Azért dolgozunk, hogy a szoftverek megbízhatósága vállalati szinten mérhető és reprodukálható legyen. Célunk egy olyan minőség- és release-kultúra kialakítása, amely támogatja a gyors fejlesztést, de minimalizálja a kockázatot.
+        </p>
+      </section>
+
+      <section style="margin-top:28px">
+        <div class="grid">
+          <div class="card">
+            <h3>Our Approach</h3>
+            <p>Discovery → Design → Execute → Scale. Módszerünk mérhető eredményeket ad, és integrálódik a meglévő fejlesztési folyamatokba.</p>
+          </div>
+          <div class="card">
+            <h3>Governance & Compliance</h3>
+            <p>Audit kész folyamatok, adatvédelem és megfelelés (GDPR) a tesztadatok kezelésében.</p>
+          </div>
+          <div class="card">
+            <h3>Tooling & Automation</h3>
+            <p>CI/CD, test orchestráció, automatizált környezet provisioning, valamint monitoring integrációk.</p>
+          </div>
+          <div class="card">
+            <h3>Delivery Model</h3>
+            <p>Onsite / Remote / Hybrid — adaptáljuk a modellt a szervezet érettségéhez és igényeihez.</p>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top:36px">
+        <h2 class="section-title">Értékeink</h2>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center">
+          <div class="card" style="max-width:360px"><h3>Precision</h3><p style="color:var(--muted)">Minden döntés számokon alapul.</p></div>
+          <div class="card" style="max-width:360px"><h3>Reliability</h3><p style="color:var(--muted)">Mérés, ellenőrzés, monitorozás — folyamatosan.</p></div>
+          <div class="card" style="max-width:360px"><h3>Scalability</h3><p style="color:var(--muted)">Megoldások, amelyek növekednek a céggel.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:40px">© <span id="year-about"></span> GTAK Consulting Kft.</footer>
+  </div>
+  <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>
+</body>
+</html>

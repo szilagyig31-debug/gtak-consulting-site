@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kapcsolat — GTAK Consulting</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo"><div class="mark">GT</div><div><div>GTAK</div><div style="font-size:12px;color:var(--muted);font-weight:700">CONSULTING</div></div></div>
+      <nav class="nav">
+        <a href="index.html">Főoldal</a>
+        <a href="services.html">Szolgáltatások</a>
+        <a href="about.html">Rólunk</a>
+        <a href="team.html">Csapat</a>
+        <a class="cta" href="contact.html">Kapcsolat</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="section-title">Kapcsolat</h1>
+        <p style="max-width:900px;margin:auto;color:var(--muted);text-align:center">Kérdésed van? Kérj árajánlatot vagy időpontot egy rövid konzultációra.</p>
+      </section>
+
+      <section style="margin-top:20px;display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start">
+        <div>
+          <div class="card">
+            <h3>Elérhetőségek</h3>
+            <p style="color:var(--muted)">Email: <strong>info@gtakconsulting.com</strong></p>
+            <p style="color:var(--muted)">Telefon: <strong>+36 30 000 0000</strong></p>
+            <p style="color:var(--muted)">Cím: Budapest, Hungary (példa)</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="contact-panel">
+            <strong>Kérj visszahívást</strong>
+            <form onsubmit="event.preventDefault();alert('Köszönjük! Hamarosan jelentkezünk.');">
+              <input type="text" placeholder="Név" required />
+              <input type="tel" placeholder="Telefonszám" required />
+              <textarea rows="4" placeholder="Rövid leírás"></textarea>
+              <div style="display:flex;gap:10px;margin-top:8px">
+                <button class="btn btn--primary" type="submit">Küldés</button>
+                <a class="btn btn--ghost" href="index.html">Vissza</a>
+              </div>
+            </form>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer style="margin-top:36px">© <span id="year-contact"></span> GTAK Consulting Kft.</footer>
+  </div>
+  <script>document.getElementById('year-contact').textContent = new Date().getFullYear();</script>
+</body>
+</html>
