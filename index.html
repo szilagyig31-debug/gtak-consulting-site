@@ -1,117 +1,169 @@
-:root{
-  --bg: #F7F8FA;        /* GT-White */
-  --muted: #6B7278;
-  --ink: #0F1114;       /* Carbon Dark */
-  --accent-lime: #B4FF39;
-  --accent-orange: #FF7A2A;
-  --accent-blue: #3B82F6;
-  --card: #FFFFFF;
-  --glass-blur: 8px;
-  --radius-lg: 14px;
-  --shadow-sm: 0 6px 18px rgba(16,22,26,0.06);
-  --shadow-md: 0 12px 36px rgba(16,22,26,0.08);
-  --max-width: 1150px;
-  --gap: 24px;
-  --mono: 'Courier New', monospace;
-}
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GTAK Consulting — QA · Test Data · Release Management</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <div class="mark">GT</div>
+        <div>
+          <div>GTAK</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:700">CONSULTING</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Főoldal</a>
+        <a href="services.html">Szolgáltatások</a>
+        <a href="about.html">Rólunk</a>
+        <a href="team.html">Csapat</a>
+        <a class="cta" href="contact.html">Kapcsolat</a>
+      </nav>
+    </header>
 
-/* Reset */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
-  background:var(--bg); color:var(--ink);
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
-}
-.container{max-width:var(--max-width);margin:40px auto;padding:24px}
+    <!-- HERO -->
+    <main class="hero" role="main" aria-labelledby="hero-title">
+      <div>
+        <div class="kicker">[ TEST ] · [ TDM ] · [ REL ] · [ QA ]</div>
+        <div class="h1" id="hero-title">QUALITY CONTROL SYSTEM: ACTIVE</div>
+        <p class="lead">We simplify QA. We secure releases. We manage data with precision. No guesswork. Only measurable quality.</p>
+        <div class="cta-row">
+          <a href="contact.html" class="btn btn--primary">REQUEST SYSTEM ACCESS</a>
+          <a href="services.html" class="btn btn--ghost">RUN DIAGNOSTICS</a>
+        </div>
 
-/* Header */
-.header{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:18px 0;
-}
-.logo{
-  display:flex;align-items:center;gap:12px;font-weight:800;color:var(--ink);
-  letter-spacing:1px;font-size:18px;
-}
-.logo .mark{
-  width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-orange));
-  display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-family:var(--mono);
-  box-shadow:var(--shadow-sm);
-}
-.nav{display:flex;gap:18px;align-items:center}
-.nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
-.nav a:hover{color:var(--ink)}
-.nav .cta{background:linear-gradient(90deg,var(--accent-lime),#d6ff73);padding:10px 14px;color:var(--ink);border-radius:10px}
+        <div class="modules" aria-hidden>
+          <div class="module">Operational</div>
+          <div class="module">Enterprise</div>
+          <div class="module">Audit-ready</div>
+        </div>
+      </div>
 
-/* Hero */
-.hero{
-  display:grid;grid-template-columns:1fr 420px;gap:28px;
-  background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
-  padding:36px;border-radius:20px;box-shadow:var(--shadow-md);position:relative;
-}
-.kicker{font-family:var(--mono);color:var(--muted);font-weight:700;margin-bottom:8px}
-.h1{font-size:44px;font-weight:800;line-height:1.02;margin-bottom:14px}
-.lead{color:var(--muted);font-size:16px;margin-bottom:20px;max-width:58ch}
-.cta-row{display:flex;gap:12px;align-items:center}
-.btn{border:0;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer}
-.btn--primary{background:linear-gradient(90deg,var(--accent-lime),#d6ff73);color:var(--ink);box-shadow:0 10px 30px rgba(180,255,57,0.14)}
-.btn--ghost{background:transparent;border:1px solid rgba(15,17,20,0.06);color:var(--accent-blue)}
+      <aside class="dashboard" aria-label="System panels">
+        <div class="panel small">
+          <div>
+            <div class="title">QA STABILITY INDEX</div>
+            <div class="value" id="qa-index">0%</div>
+          </div>
+        </div>
 
-/* Modules */
-.modules{display:flex;gap:10px;margin-top:16px}
-.module{background:rgba(15,17,20,0.03);padding:8px 10px;border-radius:8px;font-weight:700;color:var(--muted);font-size:13px}
+        <div class="panel small">
+          <div>
+            <div class="title">RELEASE RISK</div>
+            <div class="value" style="color:var(--muted);font-weight:800">LOW</div>
+          </div>
+        </div>
 
-/* Dashboard panels (right column) */
-.dashboard{display:flex;flex-direction:column;gap:16px}
-.panel{
-  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
-  border-radius:12px;padding:14px;backdrop-filter: blur(var(--glass-blur));
-  box-shadow:var(--shadow-sm);border:1px solid rgba(15,17,20,0.03);
-}
-.panel .title{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:6px}
-.panel .value{font-size:28px;font-weight:800;color:var(--accent-blue)}
-.panel.small{display:flex;justify-content:space-between;align-items:center}
+        <div class="panel">
+          <div class="title">DATA COVERAGE</div>
+          <div class="value" id="data-coverage">0%</div>
+          <div class="progress" aria-hidden><i id="progress-bar"></i></div>
+        </div>
+      </aside>
+    </main>
 
-/* progress bar */
-.progress{height:8px;border-radius:10px;background:linear-gradient(90deg,#edf7ff,#fff0e6);overflow:hidden;margin-top:8px}
-.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent-blue),var(--accent-orange));width:0%}
+    <!-- Services preview -->
+    <section id="services">
+      <h2 class="section-title">Szolgáltatásaink</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Software Testing</h3>
+          <p>Automata és manuális tesztek, API, UI, performance — a hibák megelőzésére tervezve.</p>
+        </div>
+        <div class="card">
+          <h3>Test Data Management</h3>
+          <p>Maszkolás, szintetikus adatok, provisioning pipeline-ok, megfelelés (GDPR/CCPA).</p>
+        </div>
+        <div class="card">
+          <h3>Release Management</h3>
+          <p>CI/CD orchestration, gating, canary és rollback stratégiák, production readiness.</p>
+        </div>
+        <div class="card">
+          <h3>Quality Assurance</h3>
+          <p>Governance, KPI-ok, SLA-k és mérhető minőség folyamatok.</p>
+        </div>
+      </div>
+    </section>
 
-/* Sections */
-section{margin-top:48px}
-.section-title{font-size:32px;font-weight:800;text-align:center;margin-bottom:24px}
+    <section id="why">
+      <h2 class="section-title">Miért GTAK?</h2>
+      <div class="why">
+        <div>
+          <p style="color:var(--muted);">Hat tulajdonos, enterprise-grade módszertan, audit-ready folyamatok. Mi rendszereket adunk a minőség mögé — that means measurable outcomes, not hope.</p>
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <div class="stat"><h4>6</h4><div style="color:var(--muted)">Founders</div></div>
+            <div class="stat"><h4>94%</h4><div style="color:var(--muted)">Avg QA Stability</div></div>
+            <div class="stat"><h4>32%</h4><div style="color:var(--muted)">Defect Reduction</div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
+          <div class="person" style="background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(255,122,42,0.02));"><div style="font-weight:800">Operative Unit</div><div style="color:var(--muted)">6 Operators</div></div>
+          <div style="padding:12px;border-radius:12px;background:linear-gradient(90deg,rgba(180,255,57,0.06),rgba(59,130,246,0.02));"> <strong style="color:var(--accent-orange)">Intelligence you can trust.</strong><div style="color:var(--muted)">Engineered quality and release discipline.</div></div>
+        </div>
+      </div>
+    </section>
 
-/* Cards grid */
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow-sm);border:1px solid rgba(15,17,20,0.03)}
-.card h3{font-size:18px;margin-bottom:10px}
-.card p{color:var(--muted);font-size:14px;line-height:1.5}
+    <!-- Team / Contact excerpt -->
+    <section id="team">
+      <h2 class="section-title">Csapat</h2>
+      <div class="team">
+        <div class="person"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72'><rect rx='8' width='72' height='72' fill='%23dfe6ee'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23727c84'>A</text></svg>" alt="owner1"/><div style="font-weight:700">Owner 1</div><div style="color:var(--muted);font-size:13px">QA Architect</div></div>
+        <div class="person"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72'><rect rx='8' width='72' height='72' fill='%23dfe6ee'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23727c84'>B</text></svg>" alt="owner2"/><div style="font-weight:700">Owner 2</div><div style="color:var(--muted);font-size:13px">Data Ops</div></div>
+        <div class="person"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72'><rect rx='8' width='72' height='72' fill='%23dfe6ee'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23727c84'>C</text></svg>" alt="owner3"/><div style="font-weight:700">Owner 3</div><div style="color:var(--muted);font-size:13px">Release Lead</div></div>
+      </div>
+    </section>
 
-/* Why */
-.why{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
-.stat{background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(255,122,42,0.02));padding:14px;border-radius:10px;text-align:center}
-.stat h4{margin:0;color:var(--accent-blue);font-size:20px}
+    <section id="contact">
+      <h2 class="section-title">Kapcsolat</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:1;min-width:260px">
+          <div class="contact-panel">
+            <strong>Érdeklődés / Ajánlatkérés</strong>
+            <p style="color:var(--muted);margin-top:8px">info@gtakconsulting.com</p>
+            <p style="color:var(--muted);margin-top:12px">Vagy töltsd ki az űrlapot a részletes felmérés kéréséhez.</p>
+          </div>
+        </div>
+        <div style="min-width:320px;flex:0.9">
+          <div class="contact-panel">
+            <form onsubmit="event.preventDefault(); alert('Köszönjük! Üzenetedet megkaptuk (prototípus).');">
+              <input type="text" placeholder="Név" required />
+              <input type="email" placeholder="E-mail" required />
+              <textarea rows="4" placeholder="Rövid üzenet / igény"></textarea>
+              <div style="display:flex;gap:10px;margin-top:8px">
+                <button class="btn btn--primary" type="submit">Küldés</button>
+                <a class="btn btn--ghost" href="contact.html">Részletek</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Team */
-.team{display:flex;gap:16px;flex-wrap:wrap}
-.person{background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow-sm);width:140px;text-align:center}
-.person img{width:72px;height:72px;border-radius:50%;object-fit:cover;margin-bottom:8px}
+    <footer>
+      © <span id="year"></span> GTAK Consulting Kft. — QA · Test Data · Release Management
+    </footer>
 
-/* Contact */
-.contact-panel{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));box-shadow:var(--shadow-sm)}
-input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(15,17,20,0.06);margin-bottom:10px}
+  </div>
 
-/* Footer */
-footer{margin-top:36px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
-
-/* Responsive */
-@media (max-width:980px){
-  .hero{grid-template-columns:1fr}
-  .dashboard{order:-1}
-  .why{grid-template-columns:1fr}
-}
-@media (max-width:520px){
-  .h1{font-size:28px}
-  .section-title{font-size:24px}
-}
+  <script>
+    // demo metric animation
+    (function(){
+      const qaIndex = document.getElementById('qa-index');
+      const dataCoverage = document.getElementById('data-coverage');
+      const progress = document.getElementById('progress-bar');
+      let qa=0, dc=0;
+      function tick(){
+        if(qa<94){qa++; qaIndex.textContent = qa + '%';}
+        if(dc<87){dc++; dataCoverage.textContent = dc + '%'; progress.style.width = dc + '%';}
+        if(qa<94 || dc<87) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
